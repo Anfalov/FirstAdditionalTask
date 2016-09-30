@@ -57,7 +57,9 @@ namespace Triangle.Test
         [TestMethod]
         public void GetArea_Should_ReturnCorrectAnswer_When_TriangleIsCreated_By_Sides()
         {
-            double sideA = 87, sideB = 87, sideC = 126;
+            double sideA = 87;
+            double sideB = 87;
+            double sideC = 126;
             Triangle triangle = Triangle.ConstructBySides(sideA, sideB, sideC);
             double area = triangle.GetArea();
             Assert.AreEqual(3780, area, 1e-10);
@@ -65,7 +67,9 @@ namespace Triangle.Test
         [TestMethod]
         public void GetArea_Should_ReturnCorrectAnswer_When_TriangleIsCreated_By_AngleAnd2Sides()
         {
-            double angle = 30, sideA = 40, sideB = 20;
+            double angle = 30;
+            double sideA = 40;
+            double sideB = 20;
             Triangle triangle = Triangle.ConstructByAngleAnd2Sides(angle, sideA, sideB);
             double area = triangle.GetArea();
             Assert.AreEqual(200, area, 1e-10);
@@ -73,7 +77,9 @@ namespace Triangle.Test
         [TestMethod]
         public void GetArea_Should_ReturnCorrectAnswer_When_TriangleIsCreated_By_SideAnd2Angles()
         {
-            double side = 24, angleA = 150, angleB = 15;
+            double side = 24;
+            double angleA = 150;
+            double angleB = 15;
             Triangle triangle = Triangle.ConstructBySideAnd2Angles(side, angleA, angleB);
             double area = triangle.GetArea();
             Assert.AreEqual(144, area, 1e-10);
